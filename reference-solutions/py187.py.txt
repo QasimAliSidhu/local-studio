@@ -1,0 +1,5 @@
+label = "global"
+
+def local_label():
+    label = "local"
+    return label

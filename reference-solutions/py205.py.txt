@@ -1,0 +1,8 @@
+from functools import wraps
+
+def logged(operation, history):
+    @wraps(operation)
+    def wrapped(*args, **kwargs):
+        history.append(args)
+        return operation(*args, **kwargs)
+    return wrapped

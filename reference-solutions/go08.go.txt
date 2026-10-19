@@ -1,0 +1,23 @@
+package practice
+
+import ("context"; "fmt"; "sync")
+func Squares(ctx context.Context,values []int,workers int) ([]int,error) {
+    if workers<1 { return nil,fmt.Errorf("workers must be positive") }
+    if err:=ctx.Err(); err!=nil { return nil,err }
+    result:=make([]int,len(values))
+    if workers>len(values) { workers=len(values) }
+    jobs:=make(chan int)
+    var group sync.WaitGroup
+    for worker:=0;worker<workers;worker++ {
+        group.Add(1)
+        go func(){ defer group.Done(); for { select {
+            case <-ctx.Done(): return
+            case index,ok:=<-jobs: if !ok { return }; result[index]=values[index]*values[index]
+        } } }()
+    }
+    send:
+    for index:=range values { select { case <-ctx.Done(): break send; case jobs<-index: } }
+    close(jobs); group.Wait()
+    if err:=ctx.Err(); err!=nil { return nil,err }
+    return result,nil
+}

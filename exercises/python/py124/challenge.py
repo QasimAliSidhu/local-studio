@@ -1,0 +1,2 @@
+def approximately_equal(actual, expected, tolerance=1e-9):
+    pass

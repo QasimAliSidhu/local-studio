@@ -1,0 +1,10 @@
+def status_family(status):
+    if status >= 500:
+        return "server"
+    elif status >= 400:
+        return "client"
+    elif status >= 300:
+        return "redirect"
+    elif status >= 200:
+        return "success"
+    return "info"

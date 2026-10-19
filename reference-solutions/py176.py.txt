@@ -1,0 +1,3 @@
+raw = "  Pip on call  "
+clean = raw.strip()
+print(clean)

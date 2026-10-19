@@ -1,0 +1,7 @@
+def make_ticket_counter(start=0):
+    current = start
+    def next_ticket():
+        nonlocal current
+        current += 1
+        return current
+    return next_ticket

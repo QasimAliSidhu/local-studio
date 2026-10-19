@@ -1,0 +1,8 @@
+def parse_port(text: str) -> int:
+    value = text.strip()
+    if not value or not value.isascii() or not value.isdigit():
+        raise ValueError("expected ASCII digits")
+    port = int(value)
+    if not 1 <= port <= 65535:
+        raise ValueError("port outside range")
+    return port

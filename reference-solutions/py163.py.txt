@@ -1,0 +1,12 @@
+class Job:
+    def __init__(self, units):
+        self.units = units
+    def cost(self):
+        return self.units
+
+class PriorityJob(Job):
+    def __init__(self, units, surcharge):
+        super().__init__(units)
+        self.surcharge = surcharge
+    def cost(self):
+        return super().cost() + self.surcharge

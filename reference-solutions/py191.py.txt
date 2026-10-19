@@ -1,0 +1,3 @@
+code = "PYTHON"
+print(code[0])
+print(code[-1])

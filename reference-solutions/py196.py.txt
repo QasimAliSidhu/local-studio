@@ -1,0 +1,5 @@
+def numbered_jobs(names):
+    result = []
+    for position,name in enumerate(names,1):
+        result.append((position,name))
+    return result

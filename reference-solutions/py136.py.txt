@@ -1,0 +1,2 @@
+def job_labels(names):
+    return [f"{position}: {name}" for position, name in enumerate(names, 1) if name]

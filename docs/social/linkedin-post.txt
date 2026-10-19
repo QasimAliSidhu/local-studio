@@ -1,0 +1,50 @@
+This Python code runs.
+It still fails the mission.
+
+print("Hello!")
+
+No syntax error. The task asked for "Helpdesk online!"
+A clean run isn't the same as a correct answer.
+
+I built Local Studio with Codex around:
+Run. Inspect. Fix. Submit.
+
+The video shows a real attempt: wrong output, feedback, one edit, green checks.
+
+Today: 115 Python lessons, 8 Go challenges, saved progress and a tutor using the current lesson, code and output. It's a personal learning workspace.
+
+Code + setup: https://github.com/QasimAliSidhu/local-studio
+
+My proposed enterprise roadmap:
+
+1) Separate workspaces for every learner and organization, SSO and learner/instructor/admin permissions.
+2) Disposable, isolated code runners with resource limits and network controls; separate AI credentials and per-team budgets.
+3) Cohort assignments, instructor dashboards and versioned assessments.
+4) Audit logs, data export/deletion controls, monitoring, tested backup restores and load testing.
+5) Pilot with one team; measure completion, learning improvement and cost per learner before expanding.
+
+These enterprise capabilities are planned.
+
+Credit where it's due:
+Hands-on inspiration: Boot.dev / Lane Wagner
+https://www.boot.dev/
+Local Studio has its own lessons and exercises.
+
+Open-source foundations:
+CodeMirror — https://github.com/codemirror/basic-setup
+Bootstrap — https://github.com/twbs/bootstrap
+Lucide — https://github.com/lucide-icons/lucide
+Marked — https://github.com/markedjs/marked
+DOMPurify — https://github.com/cure53/DOMPurify
+Lesson themes: Sindre Sorhus's github-markdown-css
+https://github.com/sindresorhus/github-markdown-css
+
+Fonts:
+Inter — https://github.com/rsms/inter
+JetBrains Mono — https://github.com/JetBrains/JetBrainsMono
+Lora — https://github.com/cyrealtype/Lora-Cyrillic
+Packaging: Fontsource — https://github.com/fontsource/font-files
+
+What would your team need first: secure shared workspaces or instructor reporting?
+
+#Python #EdTech #OpenSource #Codex #BuildInPublic

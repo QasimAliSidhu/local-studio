@@ -1,0 +1,5 @@
+from pathlib import Path
+
+def nonblank_lines(path):
+    with Path(path).open(encoding="utf-8") as handle:
+        return [line.strip() for line in handle if line.strip()]

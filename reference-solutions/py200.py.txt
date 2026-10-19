@@ -1,0 +1,5 @@
+from fees import packaging_fee
+
+subtotal = 100
+total = subtotal + packaging_fee()
+print(total)

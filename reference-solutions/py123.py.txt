@@ -1,0 +1,2 @@
+def has_flags(granted, required):
+    return (granted & required) == required

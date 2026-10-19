@@ -1,0 +1,9 @@
+package practice
+
+type Sized interface { Size() int64 }
+
+func TotalSize(items []Sized) int64 {
+    var total int64
+    for _,item:=range items { total+=item.Size() }
+    return total
+}

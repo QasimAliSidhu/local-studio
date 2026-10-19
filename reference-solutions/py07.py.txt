@@ -1,0 +1,6 @@
+def normalize_task(data: dict) -> dict:
+    title = data.get("title")
+    done = data.get("done",False)
+    if not isinstance(title,str) or not title.strip() or type(done) is not bool:
+        raise ValueError("invalid task")
+    return {"title":title.strip(), "done":done}

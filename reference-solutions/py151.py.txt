@@ -1,0 +1,7 @@
+def normalize_id(value: int | str) -> int:
+    if isinstance(value, bool) or not isinstance(value, (int, str)):
+        raise TypeError("ID must be int or str")
+    result = int(value)
+    if result < 0:
+        raise ValueError("ID must be non-negative")
+    return result

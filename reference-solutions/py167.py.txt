@@ -1,0 +1,4 @@
+def nested_sum(node):
+    if isinstance(node, int):
+        return node
+    return sum(nested_sum(child) for child in node)

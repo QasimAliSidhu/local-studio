@@ -1,0 +1,5 @@
+jobs = 0
+if jobs > 0:
+    print("busy")
+else:
+    print("idle")

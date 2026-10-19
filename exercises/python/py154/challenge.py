@@ -1,0 +1,2 @@
+def reconcile(entries):
+    pass

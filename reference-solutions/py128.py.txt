@@ -1,0 +1,2 @@
+def choose_label(supplied, fallback):
+    return fallback if supplied is None else supplied

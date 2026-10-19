@@ -1,0 +1,12 @@
+def create_schema(conn):
+    conn.execute("CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY, title TEXT NOT NULL)")
+    conn.commit()
+
+def add_task(conn, title):
+    if not title.strip(): raise ValueError("empty title")
+    cursor = conn.execute("INSERT INTO tasks(title) VALUES (?)", (title.strip(),))
+    conn.commit()
+    return cursor.lastrowid
+
+def list_tasks(conn):
+    return conn.execute("SELECT id,title FROM tasks ORDER BY id").fetchall()

@@ -1,0 +1,4 @@
+def even_stream(values):
+    for value in values:
+        if value % 2 == 0:
+            yield value

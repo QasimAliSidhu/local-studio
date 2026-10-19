@@ -1,0 +1,4 @@
+name = "Pip"
+jobs = 4
+message = f"{name} has {jobs} jobs"
+print(message)

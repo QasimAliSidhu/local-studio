@@ -1,0 +1,15 @@
+class Wallet:
+    def __init__(self, balance=0):
+        if balance < 0:
+            raise ValueError("negative balance")
+        self._balance = balance
+
+    @property
+    def balance(self):
+        return self._balance
+
+    def deposit(self, amount):
+        if amount < 0:
+            raise ValueError("negative deposit")
+        self._balance += amount
+        return self._balance

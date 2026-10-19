@@ -1,0 +1,6 @@
+def dependency_usage(projects):
+    usage = {}
+    for libraries in projects.values():
+        for library in set(libraries):
+            usage[library] = usage.get(library, 0) + 1
+    return usage

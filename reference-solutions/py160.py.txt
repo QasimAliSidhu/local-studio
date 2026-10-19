@@ -1,0 +1,14 @@
+def ticket_engine(initial, commands):
+    state = dict(initial)
+    for action, ticket_id in commands:
+        if action == "add":
+            if ticket_id in state:
+                raise ValueError("ticket exists")
+            state[ticket_id] = False
+        elif action == "close":
+            if ticket_id not in state:
+                raise ValueError("ticket missing")
+            state[ticket_id] = True
+        else:
+            raise ValueError("unknown action")
+    return state

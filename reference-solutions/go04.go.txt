@@ -1,0 +1,9 @@
+package practice
+
+import ("errors"; "fmt")
+var ErrNotFound = errors.New("not found")
+func Lookup(values map[string]string,key string) (string,error) {
+    value,ok:=values[key]
+    if !ok { return "",fmt.Errorf("lookup %q: %w",key,ErrNotFound) }
+    return value,nil
+}

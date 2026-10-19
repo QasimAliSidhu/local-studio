@@ -1,0 +1,2 @@
+def can_join(current, capacity):
+    return current < capacity

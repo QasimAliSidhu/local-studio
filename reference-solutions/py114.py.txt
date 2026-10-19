@@ -1,0 +1,4 @@
+def tagged_copy(record, tag):
+    result = dict(record)
+    result["tags"] = list(record["tags"]) + [tag]
+    return result

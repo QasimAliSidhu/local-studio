@@ -1,0 +1,4 @@
+def add_job(job, jobs=None):
+    result = [] if jobs is None else list(jobs)
+    result.append(job)
+    return result

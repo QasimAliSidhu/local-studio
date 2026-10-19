@@ -1,0 +1,4 @@
+import asyncio
+
+async def collect_statuses(names, fetch):
+    return await asyncio.gather(*(fetch(name) for name in names))

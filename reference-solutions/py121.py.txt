@@ -1,0 +1,2 @@
+def boxes_needed(items, capacity):
+    return (items + capacity - 1) // capacity

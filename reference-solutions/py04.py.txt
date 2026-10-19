@@ -1,0 +1,6 @@
+DEFAULT_PRICES = [1000, 2500]
+
+def apply_discount(prices, percent):
+    if not 0 <= percent <= 100:
+        raise ValueError("percent outside range")
+    return [price * (100-percent) // 100 for price in prices]

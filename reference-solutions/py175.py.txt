@@ -1,0 +1,3 @@
+message = "hi pip"
+characters = len(message)
+print(characters)

@@ -1,0 +1,9 @@
+import csv
+from io import StringIO
+
+def csv_balances(text):
+    balances = {}
+    for row in csv.DictReader(StringIO(text)):
+        name = row["account"]
+        balances[name] = balances.get(name,0) + int(row["cents"])
+    return balances

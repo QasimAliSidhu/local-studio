@@ -1,0 +1,12 @@
+package practice
+
+import "fmt"
+func InvoiceTotal(prices, quantities []int) (int, error) {
+    if len(prices)!=len(quantities) { return 0,fmt.Errorf("length mismatch") }
+    total:=0
+    for i,price:=range prices {
+        if price<0 || quantities[i]<0 { return 0,fmt.Errorf("negative item") }
+        total+=price*quantities[i]
+    }
+    return total,nil
+}

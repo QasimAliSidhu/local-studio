@@ -1,0 +1,6 @@
+def reconcile(entries):
+    balances = {}
+    for entry in entries:
+        name = entry["account"]
+        balances[name] = balances.get(name, 0) + entry["cents"]
+    return balances

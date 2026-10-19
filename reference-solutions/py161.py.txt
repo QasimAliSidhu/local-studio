@@ -1,0 +1,8 @@
+class Worker:
+    def __init__(self, name):
+        self.name = name
+        self.completed = []
+
+    def finish(self, job_id):
+        self.completed.append(job_id)
+        return len(self.completed)

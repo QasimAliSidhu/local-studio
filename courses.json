@@ -1,0 +1,430 @@
+[
+  {
+    "number": 1,
+    "title": "Python: foundations to backend",
+    "folder": "courses/01-python-foundations",
+    "exercises": [
+      "py101",
+      "py102",
+      "py103",
+      "py104",
+      "py105",
+      "py173",
+      "py174",
+      "py181",
+      "py182",
+      "py175",
+      "py191",
+      "py176",
+      "py177",
+      "py106",
+      "py178",
+      "py107",
+      "py108",
+      "py184",
+      "py185",
+      "py186",
+      "py109",
+      "py110",
+      "py111",
+      "py112",
+      "py179",
+      "py189",
+      "py125",
+      "py126",
+      "py127",
+      "py128",
+      "py124",
+      "py121",
+      "py122",
+      "py187",
+      "py188",
+      "py113",
+      "py192",
+      "py193",
+      "py194",
+      "py117",
+      "py195",
+      "py133",
+      "py134",
+      "py135",
+      "py129",
+      "py130",
+      "py131",
+      "py132",
+      "py196",
+      "py136",
+      "py119",
+      "py120",
+      "py180",
+      "py137",
+      "py138",
+      "py139",
+      "py140",
+      "py02",
+      "py141",
+      "py142",
+      "py143",
+      "py144",
+      "py03",
+      "py123",
+      "py145",
+      "py146",
+      "py147",
+      "py149",
+      "py150",
+      "py151",
+      "py05",
+      "py07",
+      "py114",
+      "py115",
+      "py04",
+      "py01",
+      "py06",
+      "py199",
+      "py200",
+      "py201",
+      "py161",
+      "py162",
+      "py163",
+      "py164",
+      "py148",
+      "py152",
+      "py08",
+      "py203",
+      "py204",
+      "py165",
+      "py166",
+      "py118",
+      "py168",
+      "py09",
+      "py167",
+      "py116",
+      "py207",
+      "py205",
+      "py206",
+      "py169",
+      "py170",
+      "py171",
+      "py10",
+      "py208",
+      "py11",
+      "py12",
+      "py172",
+      "py153",
+      "py154",
+      "py155",
+      "py156",
+      "py157",
+      "py158",
+      "py159",
+      "py160"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Your first programs",
+        "level": "Foundation",
+        "description": "Foundation · Your first programs",
+        "lessons": [
+          "py101",
+          "py102",
+          "py103",
+          "py104"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Names, numbers and values",
+        "level": "Foundation",
+        "description": "Foundation · Names, numbers and values",
+        "lessons": [
+          "py105",
+          "py173",
+          "py174",
+          "py181",
+          "py182",
+          "py175"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Working with text",
+        "level": "Foundation",
+        "description": "Foundation · Working with text",
+        "lessons": [
+          "py191",
+          "py176",
+          "py177",
+          "py106",
+          "py178",
+          "py107",
+          "py108"
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Build your own functions",
+        "level": "Foundation",
+        "description": "Foundation · Build your own functions",
+        "lessons": [
+          "py184",
+          "py185",
+          "py186",
+          "py109",
+          "py110",
+          "py111",
+          "py112"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Make decisions",
+        "level": "Foundation",
+        "description": "Foundation · Make decisions",
+        "lessons": [
+          "py179",
+          "py189",
+          "py125",
+          "py126",
+          "py127",
+          "py128",
+          "py124",
+          "py121",
+          "py122"
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Scope, tests and debugging",
+        "level": "Foundation",
+        "description": "Foundation · Scope, tests and debugging",
+        "lessons": [
+          "py187",
+          "py188",
+          "py113",
+          "py192",
+          "py193",
+          "py194",
+          "py117"
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Lists and tuples",
+        "level": "Core Python",
+        "description": "Core Python · Lists and tuples",
+        "lessons": [
+          "py195",
+          "py133",
+          "py134",
+          "py135"
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Loops and transformations",
+        "level": "Core Python",
+        "description": "Core Python · Loops and transformations",
+        "lessons": [
+          "py129",
+          "py130",
+          "py131",
+          "py132",
+          "py196",
+          "py136",
+          "py119",
+          "py120",
+          "py180"
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Dictionaries and grouping",
+        "level": "Core Python",
+        "description": "Core Python · Dictionaries and grouping",
+        "lessons": [
+          "py137",
+          "py138",
+          "py139",
+          "py140",
+          "py02"
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Sets and uniqueness",
+        "level": "Core Python",
+        "description": "Core Python · Sets and uniqueness",
+        "lessons": [
+          "py141",
+          "py142",
+          "py143",
+          "py144",
+          "py03",
+          "py123"
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Errors and validation",
+        "level": "Core Python",
+        "description": "Core Python · Errors and validation",
+        "lessons": [
+          "py145",
+          "py146",
+          "py147"
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Describe and validate types",
+        "level": "Core Python",
+        "description": "Core Python · Describe and validate types",
+        "lessons": [
+          "py149",
+          "py150",
+          "py151",
+          "py05",
+          "py07"
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Mutation and reliable contracts",
+        "level": "Core Python",
+        "description": "Core Python · Mutation and reliable contracts",
+        "lessons": [
+          "py114",
+          "py115",
+          "py04",
+          "py01",
+          "py06"
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Modules and program boundaries",
+        "level": "Intermediate",
+        "description": "Intermediate · Modules and program boundaries",
+        "lessons": [
+          "py199",
+          "py200",
+          "py201"
+        ]
+      },
+      {
+        "number": 15,
+        "title": "Objects, interfaces and records",
+        "level": "Intermediate",
+        "description": "Intermediate · Objects, interfaces and records",
+        "lessons": [
+          "py161",
+          "py162",
+          "py163",
+          "py164",
+          "py148",
+          "py152",
+          "py08"
+        ]
+      },
+      {
+        "number": 16,
+        "title": "Functions as tools",
+        "level": "Intermediate",
+        "description": "Intermediate · Functions as tools",
+        "lessons": [
+          "py203",
+          "py204",
+          "py165",
+          "py166",
+          "py118"
+        ]
+      },
+      {
+        "number": 17,
+        "title": "Lazy streams and recursion",
+        "level": "Intermediate",
+        "description": "Intermediate · Lazy streams and recursion",
+        "lessons": [
+          "py168",
+          "py09",
+          "py167"
+        ]
+      },
+      {
+        "number": 18,
+        "title": "Advanced Python patterns",
+        "level": "Advanced Python",
+        "description": "Advanced Python · Advanced Python patterns",
+        "lessons": [
+          "py116",
+          "py207",
+          "py205",
+          "py206"
+        ]
+      },
+      {
+        "number": 19,
+        "title": "Files and structured data",
+        "level": "Backend practice",
+        "description": "Backend practice · Files and structured data",
+        "lessons": [
+          "py169",
+          "py170",
+          "py171"
+        ]
+      },
+      {
+        "number": 20,
+        "title": "Storage, searching and time",
+        "level": "Backend practice",
+        "description": "Backend practice · Storage, searching and time",
+        "lessons": [
+          "py10",
+          "py208",
+          "py11",
+          "py12"
+        ]
+      },
+      {
+        "number": 21,
+        "title": "Concurrency and capstone missions",
+        "level": "Backend practice",
+        "description": "Backend practice · Concurrency and capstone missions",
+        "lessons": [
+          "py172",
+          "py153",
+          "py154",
+          "py155",
+          "py156",
+          "py157",
+          "py158",
+          "py159",
+          "py160"
+        ]
+      }
+    ],
+    "description": "Start with one line of Python. Learn each prerequisite before functions, collections, objects, advanced patterns and backend practice.",
+    "story": "Join Mira and Pip at the Midnight Helpdesk. Keep the services running and the robot reasonably supervised.",
+    "curriculum_version": 2,
+    "core_chapters": 13,
+    "core_lessons": 77
+  },
+  {
+    "number": 13,
+    "title": "Go practice",
+    "folder": "courses/13-go-foundations",
+    "exercises": [
+      "go01",
+      "go02",
+      "go03",
+      "go04",
+      "go05",
+      "go06",
+      "go07",
+      "go08"
+    ],
+    "description": "Eight runnable Go challenges, from slices and errors to HTTP handlers and concurrency."
+  }
+]

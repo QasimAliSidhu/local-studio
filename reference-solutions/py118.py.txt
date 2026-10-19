@@ -1,0 +1,4 @@
+def verify_double(candidate):
+    assert candidate(0) == 0
+    assert candidate(-3) == -6
+    assert candidate(4) == 8

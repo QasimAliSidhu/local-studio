@@ -1,0 +1,5 @@
+jobs = 0
+setting = None
+print(jobs == 0)
+print(setting is None)
+print(jobs > 0)

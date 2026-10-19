@@ -1,0 +1,7 @@
+def first_even_job(values):
+    for value in values:
+        if value < 0:
+            continue
+        if value % 2 == 0:
+            return value
+    return None

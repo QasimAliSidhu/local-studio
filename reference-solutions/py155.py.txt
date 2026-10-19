@@ -1,0 +1,10 @@
+def admit_requests(users, limit):
+    used = {}
+    decisions = []
+    for user in users:
+        count = used.get(user, 0)
+        allowed = count < limit
+        decisions.append(allowed)
+        if allowed:
+            used[user] = count + 1
+    return decisions

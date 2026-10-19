@@ -1,0 +1,6 @@
+items = 17
+size = 5
+full_boxes = items // size
+loose_items = items % size
+print(full_boxes)
+print(loose_items)

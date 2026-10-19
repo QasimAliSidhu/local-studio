@@ -1,0 +1,2 @@
+def backoff(base, attempt, cap):
+    return min(base * (2 ** attempt), cap)

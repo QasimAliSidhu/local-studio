@@ -1,0 +1,6 @@
+def trace_total(amounts):
+    total = 0
+    for amount in amounts:
+        total += amount
+        print(f"total={total}")
+    return total

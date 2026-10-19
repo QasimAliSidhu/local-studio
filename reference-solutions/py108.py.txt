@@ -1,0 +1,3 @@
+raw = "8"
+count = int(raw)
+print(count + 2)

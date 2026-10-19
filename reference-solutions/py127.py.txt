@@ -1,0 +1,2 @@
+def is_absolute_route(text):
+    return bool(text and text[0] == "/")

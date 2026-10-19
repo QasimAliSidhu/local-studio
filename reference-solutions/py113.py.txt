@@ -1,0 +1,5 @@
+REGION = "local"
+
+def route_label(service, region=None):
+    chosen = REGION if region is None else region
+    return f"{chosen}/{service}"

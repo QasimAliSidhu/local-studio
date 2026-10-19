@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/sindresorhus/github-markdown-css",
+  "commit": "7f38dcb9054bc5d860fac65291f5c98fef47932c",
+  "files": {
+    "github-markdown-light.css": {
+      "source": "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/7f38dcb9054bc5d860fac65291f5c98fef47932c/github-markdown-light.css",
+      "sha256": "de2d14b5290b8cf2af74c95e92560d9c00642ae72de0b856cece3e4eddb2d885"
+    },
+    "github-markdown-dark-dimmed.css": {
+      "source": "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/7f38dcb9054bc5d860fac65291f5c98fef47932c/github-markdown-dark-dimmed.css",
+      "sha256": "71b98828fc99b13648ab2c3aa4fd84d8f4168d6150c13d567625133e6570d024"
+    },
+    "license": {
+      "source": "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/7f38dcb9054bc5d860fac65291f5c98fef47932c/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+    }
+  }
+}

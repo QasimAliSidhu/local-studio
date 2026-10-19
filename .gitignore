@@ -1,0 +1,25 @@
+# Personal learner data and local runtime files
+.tools/
+.history/
+playgrounds/
+practice-workspaces/
+progress.json
+learning.json
+workspace-state.json
+hosting.json
+public-hosting.json
+courses/**/notes.md
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.dpapi
+*.log
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+*-VALIDATION.json
+PYTHON-SEQUENCE-AUDIT.json

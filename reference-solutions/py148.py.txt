@@ -1,0 +1,9 @@
+class InsufficientFunds(ValueError):
+    pass
+
+def withdraw(balance, amount):
+    if amount < 0:
+        raise ValueError("amount must be non-negative")
+    if amount > balance:
+        raise InsufficientFunds("insufficient funds")
+    return balance - amount

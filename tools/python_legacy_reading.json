@@ -1,0 +1,122 @@
+{
+  "py02": {
+    "id": "py02",
+    "title": "Count API responses",
+    "goal": "Count how often each status code appears.",
+    "teaching": "A dictionary maps a **key** to its current **count**. The first time a key appears, its count starts at zero. Each later occurrence updates that same entry.\n\n> [!WARNING]\n> Do not reset the whole dictionary inside the loop. Keep the accumulated counts across iterations.",
+    "example": "counts = {}\nfor event in [\"read\", \"write\", \"read\"]:\n    counts[event] = counts.get(event, 0) + 1\n# {\"read\": 2, \"write\": 1}",
+    "task": "`count_statuses(codes)` returns a dictionary mapping each integer status code to its count. Do not change the input.",
+    "reflection": "Can your loop handle a key it has never seen before? What should an empty input return?",
+    "execution_mode": "function"
+  },
+  "py03": {
+    "id": "py03",
+    "title": "Deduplicate job IDs",
+    "goal": "Remove duplicate IDs while preserving their first-seen order.",
+    "teaching": "A **set** answers whether a value has appeared before. A **list** preserves the order you choose. Combining them lets you keep the first occurrence of each value without sorting the input.\n\n> [!WARNING]\n> Converting directly to a set removes duplicates but does not express the required first-seen order.",
+    "example": "seen = set()\nordered = []\nfor tag in [\"api\", \"db\", \"api\"]:\n    if tag not in seen:\n        seen.add(tag)\n        ordered.append(tag)",
+    "task": "`unique_jobs(ids)` returns the first occurrence of each string, preserving input order. IDs are case sensitive. Leave the input unchanged.",
+    "reflection": "Which operation records that an item has been seen? Which operation preserves its original position?",
+    "execution_mode": "function"
+  },
+  "py05": {
+    "id": "py05",
+    "title": "Validate configuration",
+    "goal": "Validate port text, then convert it to an integer.",
+    "teaching": "Configuration arrives as text. **Normalization**, **validation**, and **conversion** are separate steps. Stripping surrounding whitespace can be acceptable even when spaces inside a number are not.\n\n> [!WARNING]\n> A conversion succeeding does not prove the value meets your application rules. Check the range as well.",
+    "example": "raw = \" 42 \"\ncleaned = raw.strip()\nif not cleaned.isascii() or not cleaned.isdecimal():\n    raise ValueError(\"Expected decimal digits\")\nvalue = int(cleaned)",
+    "task": "`parse_port(text)` accepts a string of ASCII digits, optionally surrounded by whitespace, and returns an integer from 1 to 65535. Raise `ValueError` for signs, non-digits, empty strings, and out-of-range values.",
+    "reflection": "Which inputs should be accepted? Decide what empty text, signs, decimals, and out-of-range values mean before writing the conversion.",
+    "execution_mode": "function"
+  },
+  "py07": {
+    "id": "py07",
+    "title": "Typed task records",
+    "goal": "Validate incoming values and construct a clean task record.",
+    "teaching": "A type annotation documents an expected shape, but it does **not validate runtime input**. Check the values you received before constructing a clean record for the rest of your application.\n\n> [!WARNING]\n> Do not use bool(value) as a substitute for validating a boolean. The string \"false\" is truthy.",
+    "example": "def require_title(value: object) -> str:\n    if not isinstance(value, str):\n        raise ValueError(\"Title must be text\")\n    title = value.strip()\n    if not title:\n        raise ValueError(\"Title is required\")\n    return title",
+    "task": "`normalize_task(data)` returns a fresh dictionary with exactly `title` (stripped nonempty string) and `done` (boolean, defaults to False). Reject invalid titles or nonboolean done values with `ValueError`. Ignore extra fields. Add type hints.",
+    "reflection": "Which fields may be normalized, and which must already have the correct type?",
+    "execution_mode": "function"
+  },
+  "py04": {
+    "id": "py04",
+    "title": "Scope and pure functions",
+    "goal": "Apply a discount without changing the original prices.",
+    "teaching": "A function call has its own **local variables**. Assigning a new local name does not change a global name. A **pure transformation** returns a new value and leaves the input collection unchanged.\n\n> [!WARNING]\n> Changing prices in place creates a side effect. Validate the percentage before building the result.",
+    "example": "def add_fee(amounts, fee):\n    return [amount + fee for amount in amounts]\n\noriginal = [10, 20]\nupdated = add_fee(original, 3)\n# original remains [10, 20]",
+    "task": "`apply_discount(prices, percent)` returns a new list of integer prices using `price * (100-percent) // 100`. Reject percentages outside 0..100. Never mutate `prices` or `DEFAULT_PRICES`.",
+    "reflection": "If two names refer to the same list, what happens when one name changes an element? How does building a new list avoid that?",
+    "execution_mode": "function"
+  },
+  "py01": {
+    "id": "py01",
+    "title": "Invoice totals",
+    "goal": "Calculate an invoice total using integer cents.",
+    "teaching": "Represent money as **integer cents** so ordinary arithmetic stays exact. An accumulator starts with the identity for the operation: **zero** for addition. Each loop iteration contributes one line item.\n\n> [!WARNING]\n> Validate both values in a pair. A negative quantity is just as invalid as a negative price.",
+    "example": "subtotal = 0\nfor amount in [125, 250, 75]:\n    subtotal += amount\nprint(subtotal)  # 450",
+    "task": "`invoice_total(items)` receives `(unit_price_cents, quantity)` pairs. Return their total. Reject negative prices or quantities with `ValueError`; an empty invoice costs zero.",
+    "reflection": "What should an empty collection contribute? Where should invalid input be rejected?",
+    "execution_mode": "function"
+  },
+  "py06": {
+    "id": "py06",
+    "title": "Paginate query results",
+    "goal": "Return one page of items using a new list slice.",
+    "teaching": "Page numbers are usually **one-based** while list indices are **zero-based**. Convert the page once, then use slicing. Python slices naturally return fewer items at the end of a collection.\n\n> [!WARNING]\n> In Python, bool is a subclass of int. Reject booleans explicitly when the contract requires an actual integer.",
+    "example": "items = [\"a\", \"b\", \"c\", \"d\", \"e\"]\nstart = 2\nsize = 2\nwindow = items[start:start + size]  # [\"c\", \"d\"]",
+    "task": "`paginate(items, page, size)` returns one page as a new list. Page and size must be positive integers; reject booleans and other types with `ValueError`. A page beyond the end returns `[]`.",
+    "reflection": "Where does page one start? What should happen when the requested page begins beyond the last item?",
+    "execution_mode": "function"
+  },
+  "py08": {
+    "id": "py08",
+    "title": "A FIFO job queue",
+    "goal": "Build a queue that serves the oldest job first.",
+    "teaching": "A queue follows **first in, first out**. Each queue object needs its own storage. Initialize mutable state inside the constructor so two objects do not accidentally share jobs.\n\n> [!WARNING]\n> A mutable class attribute is shared by instances. Put per-queue storage on self in __init__.",
+    "example": "class Mailbox:\n    def __init__(self):\n        self.messages = []\n\nfirst = Mailbox()\nsecond = Mailbox()\nfirst.messages.append(\"hello\")\n# second.messages is still empty",
+    "task": "Implement `JobQueue`: `push(job)` appends any value, `pop()` removes and returns the oldest, `len(queue)` counts items. Empty pop raises `IndexError`. Instances must not share storage. Prefer collections.deque.",
+    "reflection": "Which end receives new jobs? Which end removes the oldest one? What is the empty-queue contract?",
+    "execution_mode": "function"
+  },
+  "py09": {
+    "id": "py09",
+    "title": "Functional log aggregation",
+    "goal": "Filter successful events and add their amounts.",
+    "teaching": "Separate a data pipeline into three questions: **which records qualify**, **what value each produces**, and **how those values combine**. A generator can pass one value at a time into an aggregation.\n\n> [!WARNING]\n> Do not mutate the input while aggregating. Keep filtering decisions distinct from output construction.",
+    "example": "events = [{\"ok\": True, \"ms\": 12}, {\"ok\": False, \"ms\": 90}]\ntotal = sum(event[\"ms\"] for event in events if event[\"ok\"])\n# 12",
+    "task": "`sum_successful(events)` sums `amount` for event dictionaries whose `status` equals `\"ok\"`. Skip other statuses and missing status values. Successful events always have numeric amounts. Do not mutate the input.",
+    "reflection": "Can the input be consumed only once? Are you changing any record while reading it?",
+    "execution_mode": "function"
+  },
+  "py10": {
+    "id": "py10",
+    "title": "Binary search",
+    "goal": "Find a target by repeatedly halving a sorted search interval.",
+    "teaching": "**Binary search** relies on sorted input. After inspecting the middle value, discard the half that cannot contain the target. Every unsuccessful iteration must make the remaining interval smaller.\n\n> [!WARNING]\n> Move a bound past the inspected middle position. Keeping the same middle can create an infinite loop.",
+    "example": "values = [3, 8, 14, 21, 30]\nleft, right = 0, len(values) - 1\nmiddle = (left + right) // 2\n# values[middle] is 14",
+    "task": "`find_index(values, target)` returns an index containing target, or -1 when absent. Any matching index is acceptable for duplicates. Use binary search rather than list.index or a linear loop.",
+    "reflection": "What invariant describes the remaining search interval? When does an empty interval mean the target is absent?",
+    "execution_mode": "function"
+  },
+  "py11": {
+    "id": "py11",
+    "title": "SQLite task storage",
+    "goal": "Store and list tasks using parameterized SQLite queries.",
+    "teaching": "SQL text describes a query. **Parameters** carry user data separately. This preserves literal characters in titles and avoids interpreting a value as part of the SQL program.\n\n> [!WARNING]\n> A one-element tuple needs a trailing comma. Never interpolate a title into an SQL statement.",
+    "example": "cursor = connection.execute(\n    \"SELECT name FROM users WHERE id = ?\",\n    (user_id,),\n)\nrow = cursor.fetchone()",
+    "task": "Implement `create_schema(conn)`, `add_task(conn, title)` returning the integer id, and `list_tasks(conn)` returning `(id, title)` tuples in id order. Schema: tasks(id INTEGER PRIMARY KEY, title TEXT NOT NULL). Strip titles and reject empty ones. Commit writes. Use SQL parameters.",
+    "reflection": "How will quotes in a title be handled? What result should a missing row produce?",
+    "execution_mode": "function"
+  },
+  "py12": {
+    "id": "py12",
+    "title": "Cache expiry",
+    "goal": "Keep cached values valid only until their expiry time.",
+    "teaching": "An expiring cache needs both a **stored value** and an **expiry time**. Expiration is a comparison against the current clock. A cached zero, False, or empty string can still be a valid hit.\n\n> [!WARNING]\n> Do not use truthiness to decide whether a key exists. Check membership and expiry separately.",
+    "example": "now = 100\nttl = 10\nentry = {\"value\": 0, \"expires_at\": now + ttl}\nexpired = 110 >= entry[\"expires_at\"]  # True",
+    "task": "Implement `Cache`: `set(key, value, ttl, now)` stores a value with deadline now+ttl; negative TTL raises ValueError. `get(key, now)` returns the stored value if now is before deadline, otherwise None. Overwrites replace the deadline. Each instance is independent.",
+    "reflection": "Is an entry valid exactly at its deadline? Can your tests control the clock?",
+    "execution_mode": "function"
+  }
+}

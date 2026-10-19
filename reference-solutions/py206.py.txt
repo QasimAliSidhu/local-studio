@@ -1,0 +1,9 @@
+class ManagedFlag:
+    def __init__(self):
+        self.active=False
+    def __enter__(self):
+        self.active=True
+        return self
+    def __exit__(self, exc_type, exc, traceback):
+        self.active=False
+        return False

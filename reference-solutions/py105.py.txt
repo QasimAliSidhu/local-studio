@@ -1,0 +1,4 @@
+minutes = 3
+extra_seconds = 5
+seconds = minutes * 60 + extra_seconds
+print(seconds)

@@ -1,0 +1,8 @@
+package practice
+
+import "strings"
+func WordCounts(text string) map[string]int {
+    counts:=make(map[string]int)
+    for _,word:=range strings.Fields(strings.ToLower(text)) { counts[word]++ }
+    return counts
+}

@@ -1,0 +1,4 @@
+jobs = 15
+seconds = 6
+rate = jobs / seconds
+print(rate)

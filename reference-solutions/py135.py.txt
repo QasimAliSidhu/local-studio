@@ -1,0 +1,5 @@
+def serve_next(waiting):
+    remaining = list(waiting)
+    if not remaining:
+        return None, remaining
+    return remaining.pop(0), remaining

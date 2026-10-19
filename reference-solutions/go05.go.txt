@@ -1,0 +1,14 @@
+package practice
+
+import ("io"; "encoding/json"; "strings"; "fmt")
+type Task struct { Title string `json:"title"`; Done bool `json:"done"` }
+func DecodeTask(r io.Reader) (Task,error) {
+    decoder:=json.NewDecoder(r); decoder.DisallowUnknownFields()
+    var task Task
+    if err:=decoder.Decode(&task); err!=nil { return Task{},err }
+    var extra any
+    if err:=decoder.Decode(&extra); err!=io.EOF { return Task{},fmt.Errorf("expected exactly one object") }
+    task.Title=strings.TrimSpace(task.Title)
+    if task.Title=="" { return Task{},fmt.Errorf("blank title") }
+    return task,nil
+}

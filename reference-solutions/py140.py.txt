@@ -1,0 +1,2 @@
+def invert_labels(labels):
+    return {value: key for key, value in labels.items()}

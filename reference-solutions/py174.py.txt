@@ -1,0 +1,5 @@
+count = 8
+label = "8"
+rate = 1.5
+print(count + 2)
+print(label + "2")

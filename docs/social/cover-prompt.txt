@@ -1,0 +1,18 @@
+Use case: ads-marketing.
+Create an audacious, premium editorial launch poster for Local Studio, an independent Python and Go course workspace built with Codex. Portrait 4:5 composition, designed to arrest attention on a mobile LinkedIn/X feed. This is a real coding product, not a generic motivational AI poster.
+
+Input image 1 is the actual product screenshot, a factual compositing reference. Use a crisp cropped insert of its right-hand code editor and console as the main product object; preserve the visible code print("Helpdesk online!") and genuine green result "All checks passed.". No invented interface controls or claims. Surround the inset with original graphic art.
+
+Art direction: near-black ink background, oversized off-white condensed grotesk typography, electric acid-lime and a small hot-coral accent. Dramatic ripped-paper diagonal, tactile grain, hard studio shadows, energetic Swiss editorial / contemporary developer-culture launch art. Strongly asymmetric but controlled. The product panel feels like it is breaking through the poster. Clear focal hierarchy, dense visual punch, generous safe margins. No stock laptop, floating robot, human face, clip-art brain, gradient blob or template dashboard. Avoid dozens of tiny unreadable elements. The typography must dominate and read instantly at phone size.
+
+Exact headline, very large, occupying the upper 40%:
+"IT RUNS."
+"IS IT RIGHT?"
+Make the question the visual punch in acid-lime. Use an oversized outlined question mark as a graphic motif behind the product panel if it strengthens the composition.
+
+Small top brand: "LOCAL STUDIO"
+Supporting line under headline: "Learn by fixing."
+Bottom line: "115 PYTHON LESSONS / 8 GO CHALLENGES"
+Small footer: "BUILT WITH CODEX · INSPIRED BY BOOT.DEV"
+
+All text must be spelled exactly. No added marketing claims, no fake engagement statistics, no endorsement logos. Sharp, sophisticated, visually forceful, publishable campaign art.

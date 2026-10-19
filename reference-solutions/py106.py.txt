@@ -1,0 +1,3 @@
+raw = "  Pip  Seven  "
+clean = raw.strip().lower().replace(" ", "_")
+print(clean)

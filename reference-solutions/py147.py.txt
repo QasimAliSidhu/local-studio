@@ -1,0 +1,5 @@
+def use_resource(resource):
+    try:
+        return resource.read()
+    finally:
+        resource.close()

@@ -1,0 +1,5 @@
+name = "Pip"
+count = 7
+rate = 2.5
+message = f"{name} processed {count} jobs ({rate:.2f}/s)"
+print(message)

@@ -1,0 +1,2 @@
+def may_enter(has_ticket, is_staff, is_banned):
+    return (has_ticket or is_staff) and not is_banned

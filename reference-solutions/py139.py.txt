@@ -1,0 +1,5 @@
+def group_tickets(tickets):
+    groups = {}
+    for ticket in tickets:
+        groups.setdefault(ticket["team"], []).append(ticket["id"])
+    return groups

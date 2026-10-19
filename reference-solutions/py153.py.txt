@@ -1,0 +1,6 @@
+def word_report(text):
+    counts = {}
+    for word in text.split():
+        key = word.lower()
+        counts[key] = counts.get(key, 0) + 1
+    return sorted(counts.items())

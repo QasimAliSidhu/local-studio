@@ -1,0 +1,9 @@
+from typing import TypedDict
+
+class Ticket(TypedDict):
+    id: int
+    title: str
+    done: bool
+
+def new_ticket(ticket_id: int, title: str) -> Ticket:
+    return {"id": ticket_id, "title": title, "done": False}

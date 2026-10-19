@@ -1,0 +1,2 @@
+def dash_words(text):
+    return "-".join(text.split())

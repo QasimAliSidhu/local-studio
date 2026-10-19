@@ -1,0 +1,5 @@
+def apply_pipeline(value, steps):
+    result = value
+    for step in steps:
+        result = step(result)
+    return result

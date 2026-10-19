@@ -1,0 +1,2 @@
+def patched_record(base, changes):
+    return {**base, **changes}

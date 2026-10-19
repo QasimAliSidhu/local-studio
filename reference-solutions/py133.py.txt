@@ -1,0 +1,4 @@
+def endpoints(values):
+    if not values:
+        return None
+    return values[0], values[-1]

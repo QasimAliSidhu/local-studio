@@ -1,0 +1,5 @@
+def try_integer(raw):
+    try:
+        return int(raw)
+    except (ValueError, TypeError):
+        return None

@@ -1,0 +1,4 @@
+def adjusted_total(amount, bonus):
+    total = amount
+    total += bonus
+    return total

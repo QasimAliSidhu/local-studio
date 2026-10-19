@@ -1,0 +1,11 @@
+import sqlite3
+
+def roundtrip_names(names):
+    conn=sqlite3.connect(":memory:")
+    try:
+        conn.execute("CREATE TABLE workers (id INTEGER PRIMARY KEY, name TEXT)")
+        for name in names:
+            conn.execute("INSERT INTO workers(name) VALUES (?)",(name,))
+        return [row[0] for row in conn.execute("SELECT name FROM workers ORDER BY id").fetchall()]
+    finally:
+        conn.close()

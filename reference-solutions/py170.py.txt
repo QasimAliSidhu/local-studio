@@ -1,0 +1,7 @@
+import json
+
+def load_job_ids(text):
+    values = json.loads(text)
+    if not isinstance(values,list) or any(type(value) is not int or value < 0 for value in values):
+        raise ValueError("expected a list of non-negative integer IDs")
+    return list(values)

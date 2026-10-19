@@ -1,0 +1,3 @@
+def leaderboard(records):
+    result = [{"name":record["name"], "score":record["score"]} for record in records]
+    return sorted(result, key=lambda record: (-record["score"], record["name"]))

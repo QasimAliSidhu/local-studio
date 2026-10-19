@@ -1,0 +1,4 @@
+def append_audit(record, event):
+    result = dict(record)
+    result["events"] = [*record["events"], event]
+    return result

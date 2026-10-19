@@ -1,0 +1,5 @@
+import math
+
+seconds = 2.2
+billed_seconds = math.ceil(seconds)
+print(billed_seconds)

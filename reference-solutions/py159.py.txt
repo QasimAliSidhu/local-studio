@@ -1,0 +1,3 @@
+def open_ticket_lines(tickets):
+    ordered = sorted((ticket for ticket in tickets if not ticket["done"]), key=lambda ticket: ticket["id"])
+    return [f"{ticket['id']}: {ticket['title']}" for ticket in ordered]

@@ -1,0 +1,3 @@
+def permission_check(granted, required, forbidden):
+    granted = set(granted)
+    return set(required) <= granted and granted.isdisjoint(forbidden)

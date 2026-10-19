@@ -1,0 +1,5 @@
+def merged_tags(groups):
+    result = set()
+    for group in groups:
+        result.update(group)
+    return result

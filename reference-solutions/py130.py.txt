@@ -1,0 +1,7 @@
+def drain_batches(work, capacity):
+    remaining = work
+    batches = 0
+    while remaining > 0:
+        remaining = max(0, remaining - capacity)
+        batches += 1
+    return batches, remaining
